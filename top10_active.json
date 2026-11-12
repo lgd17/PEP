@@ -1,58 +1,36 @@
 {
-  "generated_at": "2026-10-30T02:00:00Z",
-  "version": "MrXPRONOS-V4",
-  "matches": [
-    {
-      "rank": 1,
-      "match_id": 14025056,
+  "match": "Arsenal vs Chelsea",
 
-      "home_team": "Arsenal",
-      "away_team": "Chelsea",
+  "home_team": "Arsenal",
+  "away_team": "Chelsea",
 
-      "home_team_id": 42,
-      "away_team_id": 38,
+  "home_team_id": 42,
+  "away_team_id": 38,
 
-      "home_logo": "cache/logos/42.png",
-      "away_logo": "cache/logos/38.png",
+  "home_logo":
+    "cache/logos/42.png",
 
-      "competition": "Premier League",
+  "away_logo":
+    "cache/logos/38.png",
 
-      "prediction": "1",
+  "score_xpronos": 87,
 
-      "confidence": 84,
+  "best_pick": {
+    "market": "OVER_1_5",
+    "confidence": 91,
+    "odds": 1.46
+  },
 
-      "odds": 1.67,
+  "second_pick": {
+    "market": "1",
+    "confidence": 86,
+    "odds": 1.71
+  },
 
-      "active": true,
+  "best_exact_score": {
+    "score": "2-1",
+    "confidence": 74
+  },
 
-      "status": "ACTIF ✅",
-
-      "probability": 78.5,
-
-      "h2h_score": 81,
-
-      "form_score": 87,
-
-      "ranking_score": 79,
-
-      "injury_score": 72,
-
-      "odds_score": 83,
-
-      "home_position": 2,
-
-      "away_position": 9,
-
-      "delta_position": 7,
-
-      "missing_home": 1,
-
-      "missing_away": 4,
-
-      "value_bet": true,
-
-      "event_date": "2026-10-30T
-      19:00:00Z"
-    }
-  ]
+  "active": true
 }
