@@ -1,18 +1,67 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+fetch_today_matches.py
+
+Récupère tous les matchs du jour depuis SportsAPI Pro
+et les sauvegarde dans data/today_matches.json
+"""
+
+import json
+import os
+from datetime import datetime
+
 from api_utils import make_request
 
-API = "https://v2.football.sportsapipro.com"
+BASE_URL = "https://v2.football.sportsapipro.com"
 
-def fetch_matches():
+OUTPUT_FILE = "data/today_matches.json"
 
-    resp = make_request(
+
+def fetch_today_matches():
+
+    print("⚽ Récupération des matchs du jour...")
+
+    response = make_request(
         "GET",
-        f"{API}/api/today"
+        f"{BASE_URL}/api/today"
     )
 
-    if not resp:
-        return []
+    if response is None:
+        print("❌ Impossible de récupérer les matchs.")
+        return False
 
-    data = resp.json()
+    payload = response.json()
 
-    return data.get("events
-      ", [])
+    matches = payload.get("events", [])
+
+    result = {
+        "generated_at": datetime.utcnow().isoformat(),
+        "count": len(matches),
+        "matches": matches
+    }
+
+    os.makedirs("data", exist_ok=True)
+
+    with open(
+        OUTPUT_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+        json.dump(
+            result,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
+
+    print(
+        f"✅ {len(matches)} matchs enregistrés dans {OUTPUT_FILE}"
+    )
+
+    return True
+
+
+if __name__ == "__main__":
+    fetch_today_matches()
