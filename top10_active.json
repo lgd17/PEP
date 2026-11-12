@@ -1,36 +1,153 @@
 {
-  "match": "Arsenal vs Chelsea",
+  "version": "MRXPRONOS_V4",
+  "generated_at": "2026-10-30T08:00:00Z",
+  "min_confidence": 80,
+  "total_matches_scanned": 40,
+  "candidates_analyzed": 15,
+  "active_matches": 10,
 
-  "home_team": "Arsenal",
-  "away_team": "Chelsea",
+  "matches": [
+    {
+      "rank": 1,
 
-  "home_team_id": 42,
-  "away_team_id": 38,
+      "match_id": 14025056,
 
-  "home_logo":
-    "cache/logos/42.png",
+      "match": "Arsenal vs Chelsea",
 
-  "away_logo":
-    "cache/logos/38.png",
+      "competition": "Premier League",
 
-  "score_xpronos": 87,
+      "event_date": "2026-10-30T19:00:00Z",
 
-  "best_pick": {
-    "market": "OVER_1_5",
-    "confidence": 91,
-    "odds": 1.46
-  },
+      "home_team": "Arsenal",
+      "away_team": "Chelsea",
 
-  "second_pick": {
-    "market": "1",
-    "confidence": 86,
-    "odds": 1.71
-  },
+      "home_team_id": 42,
+      "away_team_id": 38,
 
-  "best_exact_score": {
-    "score": "2-1",
-    "confidence": 74
-  },
+      "home_logo": "cache/logos/42.png",
+      "away_logo": "cache/logos/38.png",
 
-  "active": true
+      "active": true,
+      "status": "ACTIF ✅",
+
+      "score_xpronos": 88.4,
+
+      "analysis": {
+
+        "h2h_score": 83,
+
+        "form_score": 91,
+
+        "ranking_score": 82,
+
+        "injuries_score": 76,
+
+        "odds_score": 89,
+
+        "xg_score": 87
+      },
+
+      "markets": {
+
+        "1": {
+          "probability": 72,
+          "confidence": 88,
+          "odds": 1.70
+        },
+
+        "X": {
+          "probability": 18,
+          "confidence": 29,
+          "odds": 4.20
+        },
+
+        "2": {
+          "probability": 10,
+          "confidence": 21,
+          "odds": 5.40
+        },
+
+        "BTTS_YES": {
+          "probability": 71,
+          "confidence": 84,
+          "odds": 1.78
+        },
+
+        "BTTS_NO": {
+          "probability": 29,
+          "confidence": 35,
+          "odds": 2.05
+        },
+
+        "OVER_1_5": {
+          "probability": 91,
+          "confidence": 94,
+          "odds": 1.35
+        },
+
+        "UNDER_1_5": {
+          "probability": 9,
+          "confidence": 16,
+          "odds": 4.80
+        },
+
+        "OVER_2_5": {
+          "probability": 73,
+          "confidence": 82,
+          "odds": 1.85
+        },
+
+        "UNDER_2_5": {
+          "probability": 27,
+          "confidence": 38,
+          "odds": 2.10
+        },
+
+        "OVER_3_5": {
+          "probability": 43,
+          "confidence": 55,
+          "odds": 3.10
+        },
+
+        "UNDER_3_5": {
+          "probability": 57,
+          "confidence": 61,
+          "odds": 1.45
+        }
+      },
+
+      "best_pick": {
+        "market": "OVER_1_5",
+        "confidence": 94,
+        "odds": 1.35
+      },
+
+      "second_pick": {
+        "market": "1",
+        "confidence": 88,
+        "odds": 1.70
+      },
+
+      "best_exact_score": {
+        "score": "2-1",
+        "probability": 22,
+        "confidence": 79
+      },
+
+      "top_exact_scores": [
+        {
+          "score": "2-1",
+          "confidence": 79
+        },
+        {
+          "score": "2-0",
+          "confidence": 74
+        },
+        {
+          "score": "1-0",
+          "confidence": 68
+        }
+      ]
+    }
+  ]
 }
