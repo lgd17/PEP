@@ -40,40 +40,291 @@ def compute_xpronos_score(
 
     RANK_WEIGHT = 0.15
 
-    INJURY_WEIGHT = 0.10
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-    ODDS_WEIGHT = 0.20
+"""
+xpronos_score_engine.py
 
-    XG_WEIGHT = 0.15
+Fusionne toutes les analyses
+et produit le Score XPRONOS.
 
-    final_score = (
+Sortie :
+    data/detailed_analysis.json
+"""
 
-        h2h_score * H2H_WEIGHT +
+import json
+from pathlib import Path
 
-        form_score * FORM_WEIGHT +
 
-        ranking_score * RANK_WEIGHT +
+DATA_DIR = Path("data")
 
-        injuries_score * INJURY_WEIGHT +
+OUTPUT_FILE = DATA_DIR / "detailed_analysis.json"
 
-        odds_score * ODDS_WEIGHT +
 
-        xg_score * XG_WEIGHT
+# Poids principaux
+
+WEIGHTS = {
+
+    "h2h_score": 0.15,
+
+    "form_score": 0.25,
+
+    "ranking_score": 0.15,
+
+    "injuries_score": 0.10,
+
+    "odds_score": 0.20,
+
+    "xg_score": 0.15
+}
+
+
+def load_analysis(filename):
+
+    path = DATA_DIR / filename
+
+    if not path.exists():
+        return {}
+
+    payload = json.loads(
+        path.read_text(
+            encoding="utf-8"
+        )
     )
 
-    return round(final_score, 2)
+    result = {}
+
+    for row in payload.get(
+        "matches",
+        []
+    ):
+
+        result[
+            row["match_id"]
+        ] = row
+
+    return result
 
 
-def market_confidence(
-    xpronos_score,
-    market_factor
-):
+def compute_score(match):
 
-    confidence = (
+    total = 0
 
-        xpronos_score * 0.80 +
+    for field, weight in WEIGHTS.items():
 
-        market_factor * 0.20
+        total += (
+
+            match.get(
+                field,
+                50
+            )
+
+            * weight
+        )
+
+    return round(
+        total,
+        2
+    )
+
+
+def merge_match_data():
+
+    h2h = load_analysis(
+        "h2h_analysis.json"
+    )
+
+    form = load_analysis(
+        "form_analysis.json"
+    )
+
+    standings = load_analysis(
+        "standings_analysis.json"
+    )
+
+    injuries = load_analysis(
+        "injuries_analysis.json"
+    )
+
+    odds = load_analysis(
+        "odds_analysis.json"
+    )
+
+    xg = load_analysis(
+        "xg_analysis.json"
+    )
+
+    match_ids = set()
+
+    for source in (
+        h2h,
+        form,
+        standings,
+        injuries,
+        odds,
+        xg
+    ):
+        match_ids.update(
+            source.keys()
+        )
+
+    results = []
+
+    for match_id in match_ids:
+
+        merged = {
+
+            "match_id": match_id
+        }
+
+        merged.update(
+            h2h.get(
+                match_id,
+                {}
+            )
+        )
+
+        merged.update(
+            form.get(
+                match_id,
+                {}
+            )
+        )
+
+        merged.update(
+            standings.get(
+                match_id,
+                {}
+            )
+        )
+
+        merged.update(
+            injuries.get(
+                match_id,
+                {}
+            )
+        )
+
+        merged.update(
+            odds.get(
+                match_id,
+                {}
+            )
+        )
+
+        merged.update(
+            xg.get(
+                match_id,
+                {}
+            )
+        )
+
+        merged[
+            "score_xpronos"
+        ] = compute_score(
+            merged
+        )
+
+        results.append(
+            merged
+        )
+
+    return results
+
+
+def build_summary(results):
+
+    if not results:
+
+        return {}
+
+    scores = [
+
+        x["score_xpronos"]
+
+        for x in results
+    ]
+
+    return {
+
+        "matches_analyzed":
+            len(results),
+
+        "best_score":
+            max(scores),
+
+        "worst_score":
+            min(scores),
+
+        "average_score":
+            round(
+                sum(scores)
+                /
+                len(scores),
+                2
+            )
+    }
+
+
+def main():
+
+    results = merge_match_data()
+
+    results.sort(
+
+        key=lambda x:
+
+        x["score_xpronos"],
+
+        reverse=True
+    )
+
+    output = {
+
+        "engine":
+
+        "MRXPRONOS_V4",
+
+        "weights":
+
+        WEIGHTS,
+
+        "summary":
+
+        build_summary(
+            results
+        ),
+
+        "matches":
+
+        results
+    }
+
+    OUTPUT_FILE.write_text(
+
+        json.dumps(
+            output,
+            indent=2,
+            ensure_ascii=False
+        ),
+
+        encoding="utf-8"
+    )
+
+    print(
+        f"✅ {OUTPUT_FILE}"
+    )
+
+    print(
+        f"📊 Matchs analysés : {len(results)}"
+    )
+
+
+if __name__ == "__main__":
+    main()
+
+arket_factor * 0.20
     )
 
     return round(
