@@ -1,40 +1,158 @@
-from fetch_today_matches import fetch_matches
-from candidate_filter import filter_candidates
-from active_filter import is_active
-from top10_builder import build_top10
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-matches = fetch_matches()
+"""
+main_pipeline.py
 
-candidates = filter_candidates(matches)
+Pipeline complet MR XPRONOS V4
+"""
 
-results = []
+import subprocess
+import sys
+from pathlib import Path
 
-for match in candidates:
 
-    confidence = 78
-    odds = 1.65
+PIPELINE = [
 
-    results.append({
-        "match":
-            f"{match.get('homeTeam')} vs {match.get('awayTeam')}",
-        "confidence":
-            confidence,
-        "odds":
-            odds,
-        "active":
-            is_active(
-                confidence,
-                odds
-            )
-    })
+    "fetch_today_matches.py",
 
-top10 = build_top10(results)
+    "prefilter_candidates.py",
 
-for row in top10:
+    "h2h_service.py",
+
+    "form_service.py",
+
+    "standings_service.py",
+
+    "injuries_service.py",
+
+    "odds_service.py",
+
+    "xg_service.py",
+
+    "xpronos_score_engine.py",
+
+    "market_engine.py",
+
+    "active_filter.py",
+
+    "top10_builder.py",
+
+    "logo_service.py",
+
+    "image_renderer.py"
+]
+
+
+def run_script(script):
 
     print(
-        row["match"],
-        row["confidence"],
-        "ACTIF
-✅"
+        "\n" +
+        "=" * 60
     )
+
+    print(
+        f"🚀 Exécution : {script}"
+    )
+
+    print(
+        "=" * 60
+    )
+
+    result = subprocess.run(
+        [sys.executable, script]
+    )
+
+    if result.returncode != 0:
+
+        print(
+            f"❌ Erreur dans {script}"
+        )
+
+        raise SystemExit(
+            result.returncode
+        )
+
+    print(
+        f"✅ {script}"
+    )
+
+
+def verify_outputs():
+
+    required = [
+
+        Path(
+            "data/top10_active.json"
+        ),
+
+        Path(
+            "output/top10.png"
+        )
+    ]
+
+    missing = [
+
+        str(p)
+
+        for p in required
+
+        if not p.exists()
+    ]
+
+    if missing:
+
+        print(
+            "❌ Fichiers manquants :"
+        )
+
+        for file in missing:
+
+            print(
+                f"   - {file}"
+            )
+
+        raise SystemExit(1)
+
+    print(
+        "\n✅ Vérification terminée"
+    )
+
+
+def main():
+
+    print(
+        "\n🏆 MR XPRONOS V4"
+    )
+
+    print(
+        "Analyse automatique des matchs\n"
+    )
+
+    for script in PIPELINE:
+
+        run_script(
+            script
+        )
+
+    verify_outputs()
+
+    print(
+        "\n🎯 TOP 10 ACTIF généré"
+    )
+
+    print(
+        "📄 data/top10_active.json"
+    )
+
+    print(
+        "🖼 output/top10.png"
+    )
+
+    print(
+        "\n✅ PIPELINE TERMINÉ"
+    )
+
+
+if __name__ == "__main__":
+    main()
