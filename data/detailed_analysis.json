@@ -1,0 +1,88 @@
+{
+  "engine": "MRXPRONOS_V4",
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "weights": {
+    "h2h_score": 0.15,
+    "form_score": 0.25,
+    "ranking_score": 0.15,
+    "injuries_score": 0.10,
+    "odds_score": 0.20,
+    "xg_score": 0.15
+  },
+
+  "summary": {
+    "matches_analyzed": 15,
+    "average_score": 81.7,
+    "best_score": 94.1,
+    "worst_score": 63.5
+  },
+
+  "matches": [
+    {
+      "match_id": 14025056,
+
+      "competition": "Premier League",
+
+      "event_date": "2026-10-30T19:00:00Z",
+
+      "home_team": "Arsenal",
+      "away_team": "Chelsea",
+
+      "home_team_id": 42,
+      "away_team_id": 38,
+
+      "analysis": {
+        "h2h_score": 84,
+        "form_score": 91,
+        "ranking_score": 82,
+        "injuries_score": 76,
+        "odds_score": 89,
+        "xg_score": 87
+      },
+
+      "details": {
+
+        "h2h": {
+          "matches_found": 10,
+          "home_wins": 6,
+          "draws": 2,
+          "away_wins": 2
+        },
+
+        "form": {
+          "home_form_score": 92,
+          "away_form_score": 73
+        },
+
+        "standings": {
+          "home_position": 2,
+          "away_position": 8,
+          "delta_position": 6
+        },
+
+        "injuries": {
+          "home_missing": 1,
+          "away_missing": 4
+        },
+
+        "odds": {
+          "home_win": 1.72,
+          "draw": 4.10,
+          "away_win": 5.20
+        },
+
+        "xg": {
+          "home_xg": 1.98,
+          "away_xg": 1.05,
+          "difference": 0.93
+        }
+      },
+
+      "score_xpronos": 88.45,
+
+      "score_level": "TRÈS FORT"
+    }
+  ]
+}
