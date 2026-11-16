@@ -1,0 +1,104 @@
+{
+  "source": "SportsAPIPro_V2",
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "count": 40,
+
+  "matches": [
+    {
+      "id": 14025056,
+
+      "status": {
+        "type": "notstarted",
+        "description": "Not Started"
+      },
+
+      "event_date": "2026-10-30T19:00:00Z",
+
+      "timestamp": 1793386800,
+
+      "homeTeam": {
+        "id": 42,
+        "name": "Arsenal"
+      },
+
+      "awayTeam": {
+        "id": 38,
+        "name": "Chelsea"
+      },
+
+      "tournament": {
+        "id": 17,
+        "name": "Premier League"
+      },
+
+      "season": {
+        "id": 61627,
+        "name": "2026/2027"
+      },
+
+      "country": {
+        "code": "ENG",
+        "name": "England"
+      },
+
+      "round": {
+        "round": 10
+      },
+
+      "venue": {
+        "id": 1234,
+        "name": "Emirates Stadium"
+      }
+    },
+
+    {
+      "id": 14025057,
+
+      "status": {
+        "type": "notstarted",
+        "description": "Not Started"
+      },
+
+      "event_date": "2026-10-30T21:00:00Z",
+
+      "timestamp": 1793394000,
+
+      "homeTeam": {
+        "id": 281,
+        "name": "Real Madrid"
+      },
+
+      "awayTeam": {
+        "id": 282,
+        "name": "Getafe"
+      },
+
+      "tournament": {
+        "id": 8,
+        "name": "LaLiga"
+      },
+
+      "season": {
+        "id": 70001,
+        "name": "2026/2027"
+      },
+
+      "country": {
+        "code": "ESP",
+        "name": "Spain"
+      },
+
+      "round": {
+        "round": 11
+      },
+
+      "venue": {
+        "id": 5678,
+        "name": "Santiago Berna
+béu"
+      }
+    }
+  ]
+}
