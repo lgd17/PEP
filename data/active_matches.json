@@ -1,0 +1,106 @@
+{
+  "engine": "MRXPRONOS_V4",
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "min_confidence": 80,
+
+  "count": 10,
+
+  "matches": [
+    {
+      "match_id": 14025056,
+
+      "competition": "Premier League",
+
+      "event_date": "2026-10-30T19:00:00Z",
+
+      "home_team": "Arsenal",
+
+      "away_team": "Chelsea",
+
+      "home_team_id": 42,
+
+      "away_team_id": 38,
+
+      "score_xpronos": 88.45,
+
+      "active": true,
+
+      "status": "ACTIF ✅",
+
+      "best_pick": {
+        "market": "OVER_1_5",
+        "probability": 89,
+        "confidence": 94,
+        "odds": 1.36
+      },
+
+      "second_pick": {
+        "market": "1",
+        "probability": 72,
+        "confidence": 88,
+        "odds": 1.72
+      },
+
+      "all_valid_markets": [
+        {
+          "market": "OVER_1_5",
+          "confidence": 94,
+          "odds": 1.36
+        },
+
+        {
+          "market": "1",
+          "confidence": 88,
+          "odds": 1.72
+        },
+
+        {
+          "market": "OVER_2_5",
+          "confidence": 86,
+          "odds": 1.82
+        },
+
+        {
+          "market": "BTTS_YES",
+          "confidence": 82,
+          "odds": 1.75
+        }
+      ],
+
+      "best_exact_score": {
+        "score": "2-1",
+        "probability": 22,
+        "confidence": 84
+      },
+
+      "top_exact_scores": [
+        {
+          "score": "2-1",
+          "confidence": 84
+        },
+
+        {
+          "score": "2-0",
+          "confidence": 81
+        },
+
+        {
+          "score": "1-0",
+          "confidence": 78
+        }
+      ],
+
+      "analysis": {
+        "h2h_score": 84,
+        "form_score": 91,
+        "ranking_score": 82,
+        "injuries_score": 76,
+        "odds_score": 89,
+        "xg_score"
+          : 87
+      }
+    }
+  ]
+    }
