@@ -1,0 +1,139 @@
+{
+  "engine": "MRXPRONOS_V4",
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "count": 15,
+
+  "matches": [
+    {
+      "match_id": 14025056,
+
+      "competition": "Premier League",
+
+      "event_date": "2026-10-30T19:00:00Z",
+
+      "home_team": "Arsenal",
+
+      "away_team": "Chelsea",
+
+      "home_team_id": 42,
+
+      "away_team_id": 38,
+
+      "score_xpronos": 88.45,
+
+      "markets": {
+
+        "1X2": {
+
+          "1": {
+            "probability": 72,
+            "confidence": 88,
+            "odds": 1.72
+          },
+
+          "X": {
+            "probability": 18,
+            "confidence": 24,
+            "odds": 4.10
+          },
+
+          "2": {
+            "probability": 10,
+            "confidence": 12,
+            "odds": 5.20
+          }
+        },
+
+        "BTTS": {
+
+          "YES": {
+            "probability": 68,
+            "confidence": 82,
+            "odds": 1.75
+          },
+
+          "NO": {
+            "probability": 32,
+            "confidence": 18,
+            "odds": 2.15
+          }
+        },
+
+        "TOTALS": {
+
+          "OVER_1_5": {
+            "probability": 89,
+            "confidence": 94,
+            "odds": 1.36
+          },
+
+          "UNDER_1_5": {
+            "probability": 11,
+            "confidence": 6,
+            "odds": 5.00
+          },
+
+          "OVER_2_5": {
+            "probability": 74,
+            "confidence": 86,
+            "odds": 1.82
+          },
+
+          "UNDER_2_5": {
+            "probability": 26,
+            "confidence": 14,
+            "odds": 2.05
+          },
+
+          "OVER_3_5": {
+            "probability": 54,
+            "confidence": 72,
+            "odds": 3.10
+          },
+
+          "UNDER_3_5": {
+            "probability": 46,
+            "confidence": 28,
+            "odds": 1.50
+          }
+        }
+      },
+
+      "exact_scores": [
+
+        {
+          "score": "2-1",
+          "probability": 22,
+          "confidence": 84
+        },
+
+        {
+          "score": "2-0",
+          "probability": 18,
+          "confidence": 81
+        },
+
+        {
+          "score": "1-0",
+          "probability": 14,
+          "confidence": 78
+        },
+
+        {
+          "score": "3-1",
+          "probability": 11,
+          "confidence": 74
+        },
+
+        {
+          "score": "1-1",
+          "probability": 9,
+          "confidence": 68
+        }
+      ]
+    }
+  ]
+    }
+            
