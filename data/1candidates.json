@@ -1,0 +1,72 @@
+{
+  "source_matches": 40,
+
+  "selected_matches": 15,
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "matches": [
+    {
+      "id": 14025056,
+
+      "event_date": "2026-10-30T19:00:00Z",
+
+      "homeTeam": {
+        "id": 42,
+        "name": "Arsenal"
+      },
+
+      "awayTeam": {
+        "id": 38,
+        "name": "Chelsea"
+      },
+
+      "tournament": {
+        "id": 17,
+        "name": "Premier League"
+      },
+
+      "season": {
+        "id": 61627
+      },
+
+      "country": {
+        "code": "ENG"
+      },
+
+      "prefilter_score": 45
+    },
+
+    {
+      "id": 14025057,
+
+      "event_date": "2026-10-30T21:00:00Z",
+
+      "homeTeam": {
+        "id": 281,
+        "name": "Real Madrid"
+      },
+
+      "awayTeam": {
+        "id": 282,
+        "name": "Getafe"
+      },
+
+      "tournament": {
+        "id": 8,
+        "name": "LaLiga"
+      },
+
+      "season": {
+        "id": 70001
+      },
+
+      "country": {
+        "code": "ESP"
+      },
+
+      "prefilter_scor
+      e": 42
+    }
+  ]
+      }
