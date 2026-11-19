@@ -1,0 +1,76 @@
+{
+  "analysis_type": "INJURIES",
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "count": 15,
+
+  "matches": [
+    {
+      "match_id": 14025056,
+
+      "competition": "Premier League",
+
+      "home_team": "Arsenal",
+
+      "away_team": "Chelsea",
+
+      "home_team_id": 42,
+
+      "away_team_id": 38,
+
+      "home_missing": 1,
+
+      "away_missing": 4,
+
+      "home_injured": [
+        {
+          "player_id": 1001,
+          "player_name": "Player A",
+          "reason": "Injury",
+          "expected_return": "2026-11-12"
+        }
+      ],
+
+      "away_injured": [
+        {
+          "player_id": 2001,
+          "player_name": "Player B",
+          "reason": "Injury",
+          "expected_return": "2026-11-20"
+        },
+        {
+          "player_id": 2002,
+          "player_name": "Player C",
+          "reason": "Suspended",
+          "expected_return": "2026-11-01"
+        },
+        {
+          "player_id": 2003,
+          "player_name": "Player D",
+          "reason": "Injury",
+          "expected_return": "2026-11-15"
+        },
+        {
+          "player_id": 2004,
+          "player_name": "Player E",
+          "reason": "Injury",
+          "expected_return": null
+        }
+      ],
+
+      "home_injury_count": 1,
+
+      "away_injury_count": 3,
+
+      "home_suspension_count": 0,
+
+      "away_suspension_count": 1,
+
+      "missing_difference": 3,
+
+      "injuries_scor
+      e": 80
+    }
+  ]
+    }
