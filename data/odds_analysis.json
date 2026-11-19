@@ -1,0 +1,70 @@
+{
+  "analysis_type": "ODDS",
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "count": 15,
+
+  "matches": [
+    {
+      "match_id": 14025056,
+
+      "competition": "Premier League",
+
+      "home_team": "Arsenal",
+
+      "away_team": "Chelsea",
+
+      "home_team_id": 42,
+
+      "away_team_id": 38,
+
+      "bookmaker": "Featured Odds",
+
+      "markets": {
+
+        "1X2": {
+          "home_win": 1.72,
+          "draw": 4.10,
+          "away_win": 5.20
+        },
+
+        "double_chance": {
+          "1X": 1.18,
+          "12": 1.27,
+          "X2": 2.05
+        },
+
+        "btts": {
+          "yes": 1.75,
+          "no": 2.15
+        },
+
+        "totals": {
+          "over_1_5": 1.36,
+          "under_1_5": 5.00,
+
+          "over_2_5": 1.82,
+          "under_2_5": 2.05,
+
+          "over_3_5": 3.10,
+          "under_3_5": 1.50
+        }
+      },
+
+      "favorite_side": "HOME",
+
+      "favorite_odds": 1.72,
+
+      "implied_home_probability": 58.14,
+
+      "implied_draw_probability": 24.39,
+
+      "implied_away_probability": 19.23,
+
+      "market_strength": "STRONG_HOME",
+
+      "odds_score": 89
+    }
+  ]
+}
