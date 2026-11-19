@@ -1,0 +1,75 @@
+{
+  "analysis_type": "FORM",
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "count": 15,
+
+  "matches": [
+    {
+      "match_id": 14025056,
+
+      "competition": "Premier League",
+
+      "home_team": "Arsenal",
+
+      "away_team": "Chelsea",
+
+      "home_team_id": 42,
+
+      "away_team_id": 38,
+
+      "home_last_10": [
+        "W",
+        "W",
+        "D",
+        "W",
+        "W",
+        "W",
+        "L",
+        "W",
+        "D",
+        "W"
+      ],
+
+      "away_last_10": [
+        "L",
+        "D",
+        "W",
+        "L",
+        "D",
+        "W",
+        "L",
+        "W",
+        "D",
+        "L"
+      ],
+
+      "home_wins": 7,
+      "home_draws": 2,
+      "home_losses": 1,
+
+      "away_wins": 3,
+      "away_draws": 3,
+      "away_losses": 4,
+
+      "home_points": 23,
+      "away_points": 12,
+
+      "home_goals_scored": 22,
+      "home_goals_conceded": 9,
+
+      "away_goals_scored": 13,
+      "away_goals_conceded": 16,
+
+      "home_form_score": 92,
+
+      "away_form_score": 58,
+
+      "form_difference": 34,
+
+      "form_sco
+  re": 91
+    }
+  ]
+}
