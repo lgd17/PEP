@@ -1,0 +1,27 @@
+{
+  "updated_at": "2026-10-30T08:00:00Z",
+
+  "teams": {
+
+    "42": {
+      "team_name": "Arsenal",
+      "file": "cache/logos/42.png"
+    },
+
+    "38": {
+      "team_name": "Chelsea",
+      "file": "cache/logos/38.png"
+    },
+
+    "281": {
+      "team_name": "Real Madrid",
+      "file": "cache/logos/281.png"
+    },
+
+    "282": {
+      "team_name": "Getafe",
+      "file": "cache/logos/282.png"
+    }
+
+}
+}
