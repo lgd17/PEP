@@ -1,0 +1,55 @@
+{
+  "updated_at": "2026-10-30T08:00:00Z",
+
+  "flags": {
+
+    "ENG": {
+      "country": "England",
+      "file": "cache/flags/ENG.png",
+      "emoji": "🇬🇧"
+    },
+
+    "ESP": {
+      "country": "Spain",
+      "file": "cache/flags/ESP.png",
+      "emoji": "🇪🇸"
+    },
+
+    "FRA": {
+      "country": "France",
+      "file": "cache/flags/FRA.png",
+      "emoji": "🇫🇷"
+    },
+
+    "GER": {
+      "country": "Germany",
+      "file": "cache/flags/GER.png",
+      "emoji": "🇩🇪"
+    },
+
+    "ITA": {
+      "country": "Italy",
+      "file": "cache/flags/ITA.png",
+      "emoji": "🇮🇹"
+    },
+
+    "POR": {
+      "country": "Portugal",
+      "file": "cache/flags/POR.png",
+      "emoji": "🇵🇹"
+    },
+
+    "NED": {
+      "country": "Netherlands",
+      "file": "cache/flags/NED.png",
+      "emoji": "🇳🇱"
+    },
+
+    "BEL": {
+      "country": "Belgium",
+      "file": "cache/flags/BEL.png",
+      "emoji": "🇧🇪"
+  
+    }
+  }
+    }
