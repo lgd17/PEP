@@ -1,0 +1,130 @@
+{
+  "analysis_type": "STANDINGS",
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "count": 15,
+
+  "matches": [
+    {
+      "match_id": 14025056,
+
+      "competition": "Premier League",
+
+      "tournament_id": 17,
+
+      "season_id": 61627,
+
+      "home_team": "Arsenal",
+
+      "away_team": "Chelsea",
+
+      "home_team_id": 42,
+
+      "away_team_id": 38,
+
+      "home_position": 2,
+
+      "away_position": 8,
+
+      "home_points": 24,
+
+      "away_points": 16,
+
+      "home_played": 10,
+
+      "away_played": 10,
+
+      "home_wins": 7,
+
+      "home_draws": 3,
+
+      "home_losses": 0,
+
+      "away_wins": 4,
+
+      "away_draws": 4,
+
+      "away_losses": 2,
+
+      "home_goals_for": 23,
+
+      "home_goals_against": 8,
+
+      "away_goals_for": 14,
+
+      "away_goals_against": 11,
+
+      "home_goal_difference": 15,
+
+      "away_goal_difference": 3,
+
+      "delta_position": 6,
+
+      "delta_points": 8,
+
+      "ranking_score": 82
+    },
+
+    {
+      "match_id": 14025057,
+
+      "competition": "LaLiga",
+
+      "tournament_id": 8,
+
+      "season_id": 70001,
+
+      "home_team": "Real Madrid",
+
+      "away_team": "Getafe",
+
+      "home_team_id": 281,
+
+      "away_team_id": 282,
+
+      "home_position": 1,
+
+      "away_position": 12,
+
+      "home_points": 28,
+
+      "away_points": 11,
+
+      "home_played": 11,
+
+      "away_played": 11,
+
+      "home_wins": 9,
+
+      "home_draws": 1,
+
+      "home_losses": 1,
+
+      "away_wins": 3,
+
+      "away_draws": 2,
+
+      "away_losses": 6,
+
+      "home_goals_for": 29,
+
+      "home_goals_against": 7,
+
+      "away_goals_for": 10,
+
+      "away_goals_against": 18,
+
+      "home_goal_difference": 22,
+
+      "away_goal_difference": -8,
+
+      "delta_position": 11,
+
+      "delta_points": 17,
+
+      "ranking_score": 94
+    }
+  ]
+}
+  
