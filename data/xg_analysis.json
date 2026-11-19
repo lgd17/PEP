@@ -1,0 +1,110 @@
+{
+  "analysis_type": "XG",
+
+  "generated_at": "2026-10-30T08:00:00Z",
+
+  "count": 15,
+
+  "matches": [
+    {
+      "match_id": 14025056,
+
+      "competition": "Premier League",
+
+      "home_team": "Arsenal",
+
+      "away_team": "Chelsea",
+
+      "home_team_id": 42,
+
+      "away_team_id": 38,
+
+      "home_xg": 1.98,
+
+      "away_xg": 1.05,
+
+      "total_xg": 3.03,
+
+      "xg_difference": 0.93,
+
+      "home_shots": 16,
+
+      "away_shots": 10,
+
+      "home_shots_on_target": 7,
+
+      "away_shots_on_target": 4,
+
+      "home_big_chances": 4,
+
+      "away_big_chances": 2,
+
+      "home_average_xg_per_shot": 0.124,
+
+      "away_average_xg_per_shot": 0.105,
+
+      "expected_btts": true,
+
+      "expected_over_1_5": true,
+
+      "expected_over_2_5": true,
+
+      "expected_over_3_5": false,
+
+      "xg_level": "HIGH",
+
+      "xg_score": 87
+    },
+
+    {
+      "match_id": 14025057,
+
+      "competition": "LaLiga",
+
+      "home_team": "Real Madrid",
+
+      "away_team": "Getafe",
+
+      "home_team_id": 281,
+
+      "away_team_id": 282,
+
+      "home_xg": 2.31,
+
+      "away_xg": 0.78,
+
+      "total_xg": 3.09,
+
+      "xg_difference": 1.53,
+
+      "home_shots": 18,
+
+      "away_shots": 8,
+
+      "home_shots_on_target": 9,
+
+      "away_shots_on_target": 3,
+
+      "home_big_chances": 5,
+
+      "away_big_chances": 1,
+
+      "home_average_xg_per_shot": 0.128,
+
+      "away_average_xg_per_shot": 0.097,
+
+      "expected_btts": false,
+
+      "expected_over_1_5": true,
+
+      "expected_over_2_5": true,
+
+      "expected_over_3_5": true,
+
+      "xg_level
+": "VERY_HIGH",
+
+      "xg_score": 94
+    }
+  ]
+}
