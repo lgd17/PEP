@@ -1,0 +1,82 @@
+name: MR XPRONOS V4
+
+on:
+
+  workflow_dispatch:
+
+  schedule:
+    # Tous les jours à 07:00 UTC
+    - cron: "0 7 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+
+  xpronos:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create folders
+        run: |
+          mkdir -p data
+          mkdir -p cache/logos
+          mkdir -p cache/flags
+          mkdir -p output
+          mkdir -p web/data
+
+      - name: Run XPRONOS pipeline
+        env:
+          SPORTDATA_API_KEY_1: ${{ secrets.SPORTDATA_API_KEY_1 }}
+          SPORTDATA_API_KEY_2: ${{ secrets.SPORTDATA_API_KEY_2 }}
+          SPORTDATA_API_KEY_3: ${{ secrets.SPORTDATA_API_KEY_3 }}
+          SPORTDATA_API_KEY_4: ${{ secrets.SPORTDATA_API_KEY_4 }}
+          SPORTDATA_API_KEY_5: ${{ secrets.SPORTDATA_API_KEY_5 }}
+        run: |
+          python main_pipeline.py
+
+      - name: Update website JSON
+        run: |
+          cp data/top10_active.json web/data/top10_active.json
+
+      - name: Save history
+        run: |
+          mkdir -p output/publish_history
+          cp data/top10_active.json output/publish_history/$(date +%F).json
+
+      - name: Commit generated data
+        run: |
+          git config user.name "xpronos-bot"
+          git config user.email "actions@github.com"
+
+          git add data/
+          git add output/
+          git add web/data/
+
+          git diff --cached --quiet || git commit -m "Update top10 data"
+
+      - name: Push changes
+        run: |
+          git push
+
+      - name: Publish Telegram
+        env:
+          FOOTBALL_NEWS_BOT_TOKEN: ${{ secrets.FOOTBALL_NEWS_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python telegram_publisher.py
